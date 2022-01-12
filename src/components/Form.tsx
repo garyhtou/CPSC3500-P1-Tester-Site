@@ -3,6 +3,7 @@ import { Link as ChakraLink, Button } from '@chakra-ui/react';
 import { Container } from './Container';
 import {
 	FormControl,
+	Textarea,
 	FormLabel,
 	FormErrorMessage,
 	FormHelperText,
@@ -150,7 +151,7 @@ export const Form = ({ setPost, setResult }) => {
 								<FormLabel>
 									<code>stdin</code>
 								</FormLabel>
-								<Input
+								<Textarea
 									placeholder='some text here'
 									name='stdin'
 									value={values.stdin}

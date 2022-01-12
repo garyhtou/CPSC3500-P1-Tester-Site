@@ -71,7 +71,7 @@ export const Results = ({ post, result }) => {
 			{post.stdin && (
 				<FormControl mt='1rem'>
 					<FormLabel>stdin</FormLabel>
-					<Input
+					<Textarea
 						isReadOnly
 						isDisabled
 						resize={'vertical'}
