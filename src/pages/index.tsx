@@ -17,6 +17,7 @@ import { DarkModeSwitch } from '../components/DarkModeSwitch';
 import { CTA } from '../components/CTA';
 import { Footer } from '../components/Footer';
 import { Form } from '../components/Form';
+import { Results } from '../components/Results';
 import { Card } from '../components/Card';
 import { useState } from 'react';
 
@@ -37,32 +38,7 @@ const Index = () => {
 					<Form setPost={setPost} setResult={setResult} />
 				</Card>
 				<Card>
-					<List spacing={3} my={0}>
-						{/* <ListItem>
-							<ListIcon as={CheckCircleIcon} color='green.500' />
-							<ChakraLink
-								isExternal
-								href='https://chakra-ui.com'
-								flexGrow={1}
-								mr={2}
-							>
-								Chakra UI <LinkIcon />
-							</ChakraLink>
-						</ListItem>
-						<ListItem>
-							<ListIcon as={CheckCircleIcon} color='green.500' />
-							<ChakraLink
-								isExternal
-								href='https://nextjs.org'
-								flexGrow={1}
-								mr={2}
-							>
-								Next.js <LinkIcon />
-							</ChakraLink>
-						</ListItem> */}
-						<pre>{JSON.stringify(post, null, 2)}</pre>
-						<pre>{JSON.stringify(result, null, 2)}</pre>
-					</List>
+					<Results post={post} result={result} />
 				</Card>
 			</Main>
 
@@ -72,3 +48,30 @@ const Index = () => {
 };
 
 export default Index;
+
+// <List spacing={3} my={0}>
+//   {/* <ListItem>
+//     <ListIcon as={CheckCircleIcon} color='green.500' />
+//     <ChakraLink
+//       isExternal
+//       href='https://chakra-ui.com'
+//       flexGrow={1}
+//       mr={2}
+//     >
+//       Chakra UI <LinkIcon />
+//     </ChakraLink>
+//   </ListItem>
+//   <ListItem>
+//     <ListIcon as={CheckCircleIcon} color='green.500' />
+//     <ChakraLink
+//       isExternal
+//       href='https://nextjs.org'
+//       flexGrow={1}
+//       mr={2}
+//     >
+//       Next.js <LinkIcon />
+//     </ChakraLink>
+//   </ListItem> */}
+//   <pre>{JSON.stringify(post, null, 2)}</pre>
+//   <pre>{JSON.stringify(result, null, 2)}</pre>
+// </List>

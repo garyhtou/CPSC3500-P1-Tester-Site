@@ -23,12 +23,6 @@ import axios from 'axios';
 export const Form = ({ setPost, setResult }) => {
 	const API_URL = 'https://cpsc3500-p1-tester.herokuapp.com/';
 
-	const [util, setUtil] = useState('wcat');
-	const handleUtilChange = (val) => setUtil(val);
-
-	const [files, setFiles] = useState(['']);
-	const handleFilesChange = (val) => setUtil(val);
-
 	const UploadComponent = (props: BoxProps & { setFieldValue; value }) => {
 		const { setFieldValue, value } = props;
 		const propsForBox = Object.assign({}, props);
@@ -43,7 +37,7 @@ export const Form = ({ setPost, setResult }) => {
 			},
 		});
 		return (
-			<Box {...props}>
+			<Box {...propsForBox}>
 				{}
 				<div {...getRootProps({ className: 'dropzone' })}>
 					<input {...getInputProps()} />
@@ -77,7 +71,7 @@ export const Form = ({ setPost, setResult }) => {
 						console.log(values);
 
 						const postForm = new FormData();
-						const postObj = {};
+						const postObj = { util: values.util };
 
 						values.files.forEach((file, i) => {
 							postForm.append(`file.${i}`, file);
@@ -94,6 +88,7 @@ export const Form = ({ setPost, setResult }) => {
 						}
 
 						setPost(postObj);
+						setResult({});
 						const resp = await axios.post(API_URL + values.util, postForm, {
 							headers: { 'Content-Type': 'multipart/form-data' },
 						});
