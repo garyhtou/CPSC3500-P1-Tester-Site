@@ -1,4 +1,4 @@
-import { Link as ChakraLink, Button } from '@chakra-ui/react';
+import { Link as ChakraLink, Button, Avatar } from '@chakra-ui/react';
 
 import { Container } from './Container';
 
@@ -8,24 +8,29 @@ export const CTA = () => (
 		position='fixed'
 		bottom='0'
 		width='100%'
-		maxWidth='48rem'
 		pt={3}
 		pb={5}
 	>
-		<ChakraLink isExternal href='https://chakra-ui.com' flexGrow={1} mx={2}>
-			<Button width='100%' variant='outline' colorScheme='green'>
-				chakra-ui
+		<ChakraLink
+			isExternal
+			href='https://github.com/garyhtou/cpsc3500-p1-tester-site'
+			flexGrow={2}
+			mx={2}
+		>
+			<Button width='100%' variant='link' colorScheme='green'>
+				View GitHub
 			</Button>
 		</ChakraLink>
 
-		<ChakraLink
-			isExternal
-			href='https://github.com/vercel/next.js/blob/canary/examples/with-chakra-ui-typescript'
-			flexGrow={3}
-			mx={2}
-		>
-			<Button width='100%' variant='solid' colorScheme='green'>
-				View Repo
+		<ChakraLink isExternal href='https://garytou.com' flexGrow={3} mx={2}>
+			<Button width='100%' variant='link' colorScheme='green'>
+				<Avatar
+					name='Gary Tou'
+					size={'xs'}
+					mr={'0.5rem'}
+					src='https://assets.garytou.com/profile/GaryTou.jpg'
+				/>
+				<span>Built by Gary Tou</span>
 			</Button>
 		</ChakraLink>
 	</Container>
