@@ -55,7 +55,7 @@ export const Form = ({ setPost, setResult }) => {
 	return (
 		<>
 			<Formik
-				initialValues={{ util: 'wcat', files: [], searchTerm: '', stdin: '' }}
+				initialValues={{ util: 'wcat', files: [], searchTerm: null, stdin: '' }}
 				validate={(values) => {
 					const errors: any = {};
 					// if (!values.email) {
@@ -80,7 +80,7 @@ export const Form = ({ setPost, setResult }) => {
 						});
 
 						if (values.util === 'wgrep') {
-							postForm.append('searchTerm', values.searchTerm ?? '');
+							postForm.append('searchTerm', values.searchTerm?.trim() || '');
 							postObj['searchTerm'] = values.searchTerm ?? '';
 						}
 						if (values.util === 'wgrep' && values.stdin.length > 0) {
