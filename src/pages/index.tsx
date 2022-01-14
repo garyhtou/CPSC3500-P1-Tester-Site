@@ -36,6 +36,13 @@ const Index = () => {
 			<Main>
 				<Card>
 					<Form setPost={setPost} setResult={setResult} />
+
+					<Box mt={'2rem'} color={'whiteAlpha.600'}>
+						<em>
+							Disclaimer: tbh there's a chance my results may be incorrect, so
+							don't fully trust this tool
+						</em>
+					</Box>
 				</Card>
 				<Card>
 					<Results post={post} result={result} />

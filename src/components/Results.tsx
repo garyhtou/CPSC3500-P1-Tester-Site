@@ -182,7 +182,7 @@ export const Results = ({ post, result }) => {
 								onChange={handleChange}
 								name='compare'
 							/>
-							<FormHelperText>Paste 'em in</FormHelperText>
+							<FormHelperText>Paste 'em in!</FormHelperText>
 							<FormErrorMessage>They're different!</FormErrorMessage>
 						</FormControl>
 
