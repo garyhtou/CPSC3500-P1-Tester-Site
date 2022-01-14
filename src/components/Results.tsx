@@ -19,6 +19,7 @@ import {
 	Divider,
 	useToast,
 	useColorMode,
+	Avatar,
 } from '@chakra-ui/react';
 import { useState, useEffect } from 'react';
 import { Formik } from 'formik';
@@ -83,7 +84,19 @@ export const Results = ({ post, result }) => {
 			)}
 			<FormControl isInvalid={hasError} mt='1rem'>
 				<HStack justifyContent={'space-between'} align={'baseline'}>
-					<FormLabel>Results</FormLabel>
+					<FormLabel>
+						<strong>
+							{' '}
+							<Avatar
+								name='Gary Tou'
+								size={'xs'}
+								mr={'0.5rem'}
+								src='https://assets.garytou.com/profile/GaryTou.jpg'
+							/>
+							Gary
+						</strong>
+						's Results
+					</FormLabel>
 					<Button
 						size={'xs'}
 						variant={'ghost'}
