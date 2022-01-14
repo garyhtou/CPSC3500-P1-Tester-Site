@@ -37,10 +37,10 @@ const Index = () => {
 				<Card>
 					<Form setPost={setPost} setResult={setResult} />
 
-					<Box mt={'2rem'} color={'whiteAlpha.600'}>
+					<Box mt={'2rem'} color={'whiteAlpha.600'} fontSize={'0.7rem'}>
 						<em>
 							Disclaimer: tbh there's a chance my results may be incorrect, so
-							don't fully trust this tool
+							don't fully trust this tool :)
 						</em>
 					</Box>
 				</Card>
